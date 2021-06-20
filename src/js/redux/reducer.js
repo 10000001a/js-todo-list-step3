@@ -1,4 +1,4 @@
-import { UPDATE_TEAM_LIST } from "./actions.js";
+import { UPDATE_TEAM_LIST } from "./types.js";
 
 const initialState = {
   teamList: [],

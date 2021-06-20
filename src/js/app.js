@@ -1,10 +1,15 @@
 import Team from "./component/team.js";
 import Kanban from "./component/kanban.js";
 import { reducer, createStore } from "./redux/index.js";
+import { updateTeams } from "./actions/index.js";
 
 export default function App() {
   const currentPathname = window.location.pathname;
   const store = createStore(reducer);
+
+  store.subscribe(() => {
+    console.log(store.getState());
+  });
 
   const router = {
     "/": () => {
